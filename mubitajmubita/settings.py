@@ -27,10 +27,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'insecure-dev-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
+DEBUG = False
 # DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['mubitajmubita.onrender.com',
+ALLOWED_HOSTS = ['mubitamubita.onrender.com',
 'www.mubitajmubita.eu.org']
 
 if DEBUG:
