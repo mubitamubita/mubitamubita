@@ -1,0 +1,23 @@
+{% extends 'website/base.html' %}
+
+{% block content %}
+<div class="global">
+  <h1>Publications</h1>
+  <div class="publications-container">
+    {% for story in stories %}
+    <div class="publications-item">
+      <ul>
+        <li><strong><a href="{{ story.link }}" target="_blank">{{ story.title }}</a></strong> &bull; {{ story.publication_type|capfirst }}</li>
+        <li>{{ story.publication_date|date:" d M Y" }}</li>
+        <li>{{ story.description }}</li>
+        <li>{{ story.magazine }}</li>
+        <hr />
+      </ul>
+  
+    </div>
+  {% empty %}
+  <p>Still trying to get published</p>
+  {% endfor %}
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <div class="welcome-advert">
+
+    <div class="welcome">
+
+      <img src="/media/personal/me-circle.png" alt="logo">
+            
+      <h1>Mubita Joseph Mubita</h1>
+      <p>
+        Welcome to my fiction world. You will find all my works: short stories, novels and series.
+      </p>
+      <p>
+        Feel free to follow me on my socials.
+      </p>
+      <ul>
+        <li><a href="https://www.x.com/mubitajmubita"><i class="fab fa-twitter"></i></a></li>
+
+        <li><a href="https://www.facebook.com/mubitajmubita"><i class="fab fa-facebook"></i></a></li>
+
+        <li><a href="https://www.linkedin.com/in/mubita-j-mubita-2010b7278?trk=contact-info">
+          <i class="fab fa-linkedin"></i>
+          </a></li>
+
+        <li><a href="https://www.x.com/mubitajmubita"><i class="fab fa-amazon"></i></a></li>
+
+        <li><a href="https://goodreads.com/mubitajmubita">
+          <i class="fab fa-goodreads"></i>
+          </a></li>
+
+
+        <li><a href="https://allauthor.com/author/mubitajmubita/"></a>AllAuthor</li>
+      </ul>
+    </div>
+<div class="sub_top">
+ <iframe src="https://embeds.beehiiv.com/b2cb2588-1742-434d-9fdd-d4beb4aadd41?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
+ <p>Subscribe to get a FREE short story </p>
+</div>
+  </div>
+  
+  <div class="mybooks">
+    <h2>Latest</h2>
+  </div>
+      
+<div class="popup-overlay" id="popupOverlay"></div>
+  <div class="popup" id="popup">
+    <button class="close-btn" id="closePopup">&times;</button>
+    <h2>Join My Newsletter</h2>
+    <p>Get updates, insights, and special offers delivered to your inbox.</p>
+    <iframe src="https://embeds.beehiiv.com/b2cb2588-1742-434d-9fdd-d4beb4aadd41?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
+
+</div>
+  
+  
+  <div class="coming_soon">
+    <div class="coming_soon_book">
+      <img src="book_covers/coming_soon.jpg" alt="bookcover" />
+    </div>
+    <div class="coming_soon_details">
+      {% for book in promobooks %}
+      <ul>
+        <li><strong>{{ book.title }}</strong></li>
+        <li><i class="fa-solid fa-calendar"></i> {{ book.publication_date }}</li>
+        <li><i class="fa fa-money-bill"></i> ${{ book.price }}</li>
+        <li><p>{{ book.description }}</p></li>
+      </ul>
+      {% endfor %}
+    </div>
+  </div>
+  
+  <!-- this is the bookshowcase -->
+      
+  <div class="mybooks">
+      <h2>Other Books</h2>
+  </div>
+  
+  <div class="book_container">
+    {% for book in books %}
+    <div class="booklist">
+      <div class="book_cover">
+      <img src="{{ book.image.url|default:'/media/covers/default.jpg' }}" alt="bookcover" />
+      <ul>
+        <li>{{ book.title }}</li>
+        <li> ${{ book.price }} </li>
+        <li><a href="{{ book.link }}"> <button id="order_button"> Order </button> </a></li>
+      </ul>
+      <br />
+    </div>
+    
+    </div>
+    {% endfor %}
+  </div>
+
+<div>
+  <iframe src="https://embeds.beehiiv.com/b4a45b7e-4536-412d-a002-c72e2ad31502" data-test-id="beehiiv-embed" width="98%" height="320" frameborder="0" scrolling="no" style="border-radius: 4px; border: 2px solid #e5e7eb; margin: 0; background-color: transparent;"></iframe>
+</div>
+{% endblock %}

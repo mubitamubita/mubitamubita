@@ -1,0 +1,21 @@
+{% extends 'website/base.html' %}
+
+{% block content %}
+
+<div class="global">
+  <div class="story-detail">
+    <a href="{% url 'stories' %}">Back</a>
+    
+    <div class="story_details">
+    <h2>{{ story.title }}</h2>
+    <small>{{ story.pub_date|date:"d M Y" }} &bull; {{ story.genre|capfirst }} </small>
+    
+    {% if story.dedication %}
+    <p class="dedication"><em> &hybull; {{ story.dedication }}</em></p>
+    {% endif %}
+    </div>
+    <p>{{ story.content }}</p>
+  </div>
+</div>
+
+{% endblock %}

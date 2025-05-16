@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  <meta charset="UTF-8">
+  
+  <meta name="description" content="Welcome to Mubita Joseph Mubita's official website. Explore captivating dark fiction, mystery, and thrilling stories, plus get exclusive updates and free content.">
+    <meta name="keywords" content="dark fiction author, mystery novels, free stories, mubita joseph mubita, author website, thrilling stories">
+    <meta name="author" content="Mubita Joseph Mubita">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Mubita Joseph Mubita - Author of Dark Fiction & Mystery">
+    <meta property="og:description" content="Discover gripping stories and thrilling mysteries by Mubita Joseph Mubita. Stay updated and get exclusive content just for you!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mubitajmubita.free.nf/index.html">
+
+    
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Mubita Joseph Mubita- Author of Dark Fiction & Mystery">
+    <meta property="twitter:description" content="Explore thrilling stories, free content, and exclusive updates from Mubita Joseph Mubita, author of dark fiction and mysteries.">
+   
+    
+  
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6KGSX0VBE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z6KGSX0VBE');
+</script>
+
+  
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="/logo/logo_small_icon_only.png" type="image/x-icon" />
+  <link href='https://fonts.googleapis.com/css?family=GFS Didot' rel='stylesheet'>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+  
+  <script src="https://kit.fontawesome.com/e7c00cd655.js" crossorigin="anonymous"></script>
+  
+  
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+  </head>
+  <body>
+    
+<div class="notification-bar">
+    <p>📢 <strong> Widow's Dose </strong> is coming 20th February 2026!
+    </p>
+</div>
+  
+<div class="topnav" id="myTopnav">
+  <a href="{% url 'home' %}" class="active">Home</a>
+  <a href="{% url 'stories' %}">Stories</a>
+  <a href="{% url 'publications' %}">Publications</a>
+  <a href="{% url 'contact' %}">Contact</a>
+  <a href="{% url 'about' %}">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i> </a>
+</div>
+    
+{% block content %}   
+
+
+{% endblock %}  
+    
+<footer>
+<div class="about">
+  <img src="/media/personal/me-circle.png" alt="logo">
+  <br>
+  <br>
+  <div class="copyright">
+    <p> &copy {% now 'Y' %} MUBiTA. </p>
+  </div>
+    
+  </div>
+
+<div class="contact">
+  <h3>Address</h3>
+  <address>
+    Lusaka, Zambia
+  </address>
+
+
+</div>
+    
+<div class="links">
+      <h3>Social Links</h3>
+      <ul>
+        <li><a href="https://www.x.com/mubitajmubita"><i class="fab fa-twitter"></i></a></li>
+
+        <li><a href="https://www.facebook.com/mubitajmubita"><i class="fab fa-facebook"></i></a></li>
+
+        <li><a href="https://www.linkedin.com/in/mubita-j-mubita-2010b7278?trk=contact-info"><i class="fab fa-linkedin"></i></a></li>
+
+        <li><a href="https://www.x.com/mubitajmubita"><i class="fab fa-amazon"></i></a></li>
+
+        <li><a href="https://goodreads.com/mubitajmubita"><i class="fab fa-goodreads"></i></a></li>
+
+
+        <li><a href="https://allauthor.com/author/mubitajmubita/"></a>AllAuthor</li>
+      </ul>
+
+</div>
+</footer>
+  </body>
+  
+  <script type="text/javascript" charset="utf-8">
+  
+  function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+};
+
+
+   const popup = document.getElementById('popup');
+    const popupOverlay = document.getElementById('popupOverlay');
+    const closePopup = document.getElementById('closePopup');
+    let popupShown = false;
+
+
+    window.addEventListener('scroll', () => {
+      if (!popupShown) {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        if (scrollPosition >= documentHeight / 2) {
+          popup.style.display = 'block';
+          popupOverlay.style.display = 'block';
+          popupShown = true;
+        }
+      }
+    });
+
+    closePopup.addEventListener('click', () => {
+      popup.style.display = 'none';
+      popupOverlay.style.display = 'none';
+    });
+
+    popupOverlay.addEventListener('click', () => {
+      popup.style.display = 'none';
+      popupOverlay.style.display = 'none';
+    });
+
+
+</script>
+  
+  
+</html>

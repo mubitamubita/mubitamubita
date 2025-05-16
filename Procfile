@@ -1,0 +1,1 @@
+web: gunicorn mubitajmubita.wsgi:application

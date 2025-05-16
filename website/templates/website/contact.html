@@ -1,0 +1,31 @@
+{% extends 'website/base.html' %}
+
+{% block content %}
+
+<div class="global">
+  <div class="contact-container">
+    <h1> Contact </h1>
+    <p> I’d love to hear from you! Whether you have feedback on my stories,
+    ideas you’d like to share, or just want to say hello, feel free to reach
+    out. Your thoughts mean the world to me and help shape my journey as an author. Drop me a message. I’m excited to connect with you! 
+    </p>
+  </div>
+  
+  <div class="message-box">
+    <form action="" method="get" accept-charset="utf-8">
+      <input type="text" name="name" id="name" placeholder="Your name" required/>
+      <br />
+      <br />
+      <input type="email" name="email" placeholder="email" required />
+      <br />
+      <br />
+      <textarea name="message" rows="8" cols="40" placeholder="your message here..." required></textarea>
+      <br />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  
+  
+</div>
+
+{% endblock %}
